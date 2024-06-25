@@ -1,0 +1,130 @@
+---
+title: "PRIMEROS PASOS"
+profesor: "PhD. Emerson del Ponte"
+subtitle: "Clase 1"
+author: "Richard Pardes-Espinosa"
+data: "2024-03-06"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+toc: true
+number-sections: true
+code-fold: show
+code-summary: "ver código"
+---
+
+Al iniciar RStudio, el software ofrece un entorno de desarrollo integrado (IDE) con varias partes clave. Aquí te explico las principales partes de la consola de RStudio, y luego te proporcionaré un esquema para visualizar mejor su disposición.
+
+## Actualizar RStudio - Posit
+
+```{r}
+# conocer qué versión de Rstudio estas utilizando 
+sessionInfo()
+
+# actualizar RStudio
+#install.packages("installr")
+#library("installr")
+
+#version
+
+#update()
+```
+
+## Operaciones
+
+En el entorno de Rstudio, el usuario podría realizar algunas operaciones matemáticas, como suma, resta, mutiplicación, división, potenciación, entre otros. A continuación, presento algunos ejemplos:
+
+```{r}
+
+1 + 7
+
+25/5
+
+log10(100)
+
+```
+
+## Vectores
+
+Un vector es una estructura de datos que puede ser un elemento o contener varios elementos del mismo tipo, como números, caracteres o valores lógicos. A continuación, presento algunos ejemplos:
+
+```{r}
+# crear vectores simples 
+a <- 1
+a
+
+b <- 2
+b
+
+a + b
+```
+
+Aquí presento otros ejemplos útilies de clases de vectores:
+
+```{r}
+# crear vectores numéricos
+nu_vector <- c("5", "25", "100", "625")
+nu_vector
+
+# crear vectores categóricos 
+ca_vector <- c("manzana", "banana", "naranja", "pera")
+ca_vector
+
+# crear vectores lógicos
+lo_vector <- c("1", "0", "1", "0")
+lo_vector
+
+# crear vectores secuencia
+se_vector <- seq(1, 10, by = 2)
+se_vector
+
+# crear vectores repitiendo un valor
+re_vector <- rep(7, times = 5)
+re_vector
+
+```
+
+Nota: Si te fijas, en la consola de RStudio denominada "Environment", precisamente en la cinta "value" se creo los valores a, b, ca_vector y otros.
+
+## Objetos
+
+Un objeto puede tomar diferentes valores, entre ellos puede expresarse como vectores, matrices, data frames, listas, entre otros. Ejemplos:
+
+En el ejemplo podemos aprecir que, un objeto puede ser expresado como un vector (ver sección 2: Vectores)
+
+```{r}
+# Crear un vector numérico
+vector <- c(1, 2, 3, 4, 5)
+
+# Crear un vector de caracteres
+vector_ufv <- c("mejoramiento de plantas", "fitopatologia")
+vector_ufv
+```
+
+Podemos crear una matriz, llamando a la función matrix y solicitando que cree 9 valores númericos (1:9), definiendo un de filas y columnas con nrow y ncol.
+
+```{r}
+# Crear una matriz
+mt <- matrix(1:9, nrow = 3, ncol = 3)
+mt
+```
+
+Para crear un data frame es posible apyándose de la función data.frame.
+
+```{r}
+# Crear un data frame
+df <- data.frame(
+  nombre = c("Jorge", "Emerson", "Eduardo"),
+  edad = c(60, 45, 45),
+  casado = c(FALSE, TRUE, FALSE))
+df
+```
+
+Si obervas, un data frame te presenta una tabla organizada, mientras que una matriz sólo te presenta datos y dimensiones sin precisar el nombre de las observaciones y variables.
+
+Un data frame, por si naturaleza esta lista para realizar los trabajos de analisis de datos, por lo cual es una función de mucha utilidad.
+
+## Exportar
+
+Al finalizar el trabajo, podrá exportar con un clic en el visor de Window como formato html. Si precisa exportar como PDF, se tendrá que cambiar en el encabezado del documento donde dice format: html y cambiar por format: pdf.

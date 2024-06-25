@@ -12,5 +12,47 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Primeros pasos.html",
+    "href": "Primeros pasos.html",
+    "title": "PRIMEROS PASOS",
+    "section": "",
+    "text": "Al iniciar RStudio, el software ofrece un entorno de desarrollo integrado (IDE) con varias partes clave. Aquí te explico las principales partes de la consola de RStudio, y luego te proporcionaré un esquema para visualizar mejor su disposición."
+  },
+  {
+    "objectID": "Primeros pasos.html#actualizar-rstudio---posit",
+    "href": "Primeros pasos.html#actualizar-rstudio---posit",
+    "title": "PRIMEROS PASOS",
+    "section": "1 Actualizar RStudio - Posit",
+    "text": "1 Actualizar RStudio - Posit\n\n\nver código\n# conocer qué versión de Rstudio estas utilizando \nsessionInfo()\n\n\nR version 4.3.3 (2024-02-29 ucrt)\nPlatform: x86_64-w64-mingw32/x64 (64-bit)\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n\n\nlocale:\n[1] LC_COLLATE=Spanish_Peru.utf8  LC_CTYPE=Spanish_Peru.utf8   \n[3] LC_MONETARY=Spanish_Peru.utf8 LC_NUMERIC=C                 \n[5] LC_TIME=Spanish_Peru.utf8    \n\ntime zone: America/Sao_Paulo\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] htmlwidgets_1.6.4 compiler_4.3.3    fastmap_1.1.1     cli_3.6.1        \n [5] tools_4.3.3       htmltools_0.5.8.1 rstudioapi_0.14   yaml_2.3.8       \n [9] rmarkdown_2.26    knitr_1.46        jsonlite_1.8.8    xfun_0.43        \n[13] digest_0.6.31     rlang_1.1.1       evaluate_0.23    \n\n\nver código\n# actualizar RStudio\n#install.packages(\"installr\")\n#library(\"installr\")\n\n#version\n\n#update()"
+  },
+  {
+    "objectID": "Primeros pasos.html#operaciones",
+    "href": "Primeros pasos.html#operaciones",
+    "title": "PRIMEROS PASOS",
+    "section": "2 Operaciones",
+    "text": "2 Operaciones\nEn el entorno de Rstudio, el usuario podría realizar algunas operaciones matemáticas, como suma, resta, mutiplicación, división, potenciación, entre otros. A continuación, presento algunos ejemplos:\n\n\nver código\n1 + 7\n\n\n[1] 8\n\n\nver código\n25/5\n\n\n[1] 5\n\n\nver código\nlog10(100)\n\n\n[1] 2"
+  },
+  {
+    "objectID": "Primeros pasos.html#vectores",
+    "href": "Primeros pasos.html#vectores",
+    "title": "PRIMEROS PASOS",
+    "section": "3 Vectores",
+    "text": "3 Vectores\nUn vector es una estructura de datos que puede ser un elemento o contener varios elementos del mismo tipo, como números, caracteres o valores lógicos. A continuación, presento algunos ejemplos:\n\n\nver código\n# crear vectores simples \na &lt;- 1\na\n\n\n[1] 1\n\n\nver código\nb &lt;- 2\nb\n\n\n[1] 2\n\n\nver código\na + b\n\n\n[1] 3\n\n\nAquí presento otros ejemplos útilies de clases de vectores:\n\n\nver código\n# crear vectores numéricos\nnu_vector &lt;- c(\"5\", \"25\", \"100\", \"625\")\nnu_vector\n\n\n[1] \"5\"   \"25\"  \"100\" \"625\"\n\n\nver código\n# crear vectores categóricos \nca_vector &lt;- c(\"manzana\", \"banana\", \"naranja\", \"pera\")\nca_vector\n\n\n[1] \"manzana\" \"banana\"  \"naranja\" \"pera\"   \n\n\nver código\n# crear vectores lógicos\nlo_vector &lt;- c(\"1\", \"0\", \"1\", \"0\")\nlo_vector\n\n\n[1] \"1\" \"0\" \"1\" \"0\"\n\n\nver código\n# crear vectores secuencia\nse_vector &lt;- seq(1, 10, by = 2)\nse_vector\n\n\n[1] 1 3 5 7 9\n\n\nver código\n# crear vectores repitiendo un valor\nre_vector &lt;- rep(7, times = 5)\nre_vector\n\n\n[1] 7 7 7 7 7\n\n\nNota: Si te fijas, en la consola de RStudio denominada “Environment”, precisamente en la cinta “value” se creo los valores a, b, ca_vector y otros."
+  },
+  {
+    "objectID": "Primeros pasos.html#objetos",
+    "href": "Primeros pasos.html#objetos",
+    "title": "PRIMEROS PASOS",
+    "section": "4 Objetos",
+    "text": "4 Objetos\nUn objeto puede tomar diferentes valores, entre ellos puede expresarse como vectores, matrices, data frames, listas, entre otros. Ejemplos:\nEn el ejemplo podemos aprecir que, un objeto puede ser expresado como un vector (ver sección 2: Vectores)\n\n\nver código\n# Crear un vector numérico\nvector &lt;- c(1, 2, 3, 4, 5)\n\n# Crear un vector de caracteres\nvector_ufv &lt;- c(\"mejoramiento de plantas\", \"fitopatologia\")\nvector_ufv\n\n\n[1] \"mejoramiento de plantas\" \"fitopatologia\"          \n\n\nPodemos crear una matriz, llamando a la función matrix y solicitando que cree 9 valores númericos (1:9), definiendo un de filas y columnas con nrow y ncol.\n\n\nver código\n# Crear una matriz\nmt &lt;- matrix(1:9, nrow = 3, ncol = 3)\nmt\n\n\n     [,1] [,2] [,3]\n[1,]    1    4    7\n[2,]    2    5    8\n[3,]    3    6    9\n\n\nPara crear un data frame es posible apyándose de la función data.frame.\n\n\nver código\n# Crear un data frame\ndf &lt;- data.frame(\n  nombre = c(\"Jorge\", \"Emerson\", \"Eduardo\"),\n  edad = c(60, 45, 45),\n  casado = c(FALSE, TRUE, FALSE))\ndf\n\n\n   nombre edad casado\n1   Jorge   60  FALSE\n2 Emerson   45   TRUE\n3 Eduardo   45  FALSE\n\n\nSi obervas, un data frame te presenta una tabla organizada, mientras que una matriz sólo te presenta datos y dimensiones sin precisar el nombre de las observaciones y variables.\nUn data frame, por si naturaleza esta lista para realizar los trabajos de analisis de datos, por lo cual es una función de mucha utilidad."
+  },
+  {
+    "objectID": "Primeros pasos.html#exportar",
+    "href": "Primeros pasos.html#exportar",
+    "title": "PRIMEROS PASOS",
+    "section": "5 Exportar",
+    "text": "5 Exportar\nAl finalizar el trabajo, podrá exportar con un clic en el visor de Window como formato html. Si precisa exportar como PDF, se tendrá que cambiar en el encabezado del documento donde dice format: html y cambiar por format: pdf."
   }
 ]
